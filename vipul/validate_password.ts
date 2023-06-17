@@ -1,4 +1,4 @@
-import { choose } from "./utilities";
+import { choose } from "../helpers/utilities";
 
 /**
  * Tests the following for the given password, if one of these fail
@@ -11,6 +11,19 @@ import { choose } from "./utilities";
  * @returns - whether the password is valid
  */
 export function validatePassword(password: string) {
+    if (password.length < 8) return false;
 
-    return choose([true, false]);
+    let numCount = 0;
+    for (let i = 0; i < password.length; i++) {
+      if (!isNaN(parseInt(password[i]))) numCount++;
+    }
+    if (numCount < 2) return false;
+  
+    let asteriskCount = 0;
+    for (let i = 0; i < password.length; i++) {
+      if (password[i] === '*') asteriskCount++;
+    }
+    if (asteriskCount !== 1) return false;
+  
+    return true;
 }
