@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { map } from "./map";
+import { map } from "../helpers/map";
 // Remove .only if array type is string 
 describe.only("map", () => {
     it("number add test", () => {
