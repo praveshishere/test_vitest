@@ -18,6 +18,7 @@ describe("map", () => {
     it("array with undefined", () => {
         expect(map([undefined], (num) => {
             // @ts-nocheck
+            // @ts-ignore
             return num + 2;
         })).toEqual([NaN]);
     })
@@ -30,6 +31,7 @@ describe("map", () => {
 
     it("Null array", () => {
         expect(map([null], (num) => {
+            // @ts-ignore
             return num + 2;
         })).toEqual([2]);
     })
@@ -37,6 +39,7 @@ describe("map", () => {
     it("Nested null array", () => {
         expect(map([[null]], (num) => {
             // @ts-nocheck
+            // @ts-ignore
             return num + 2;
         })).toEqual(["2"]);
     })
@@ -44,6 +47,7 @@ describe("map", () => {
     it("Nested null array", () => {
         expect(map([[null]], (num) => {
             // @ts-nocheck
+            // @ts-ignore
             return num + 2;
         })).toEqual(["2"])
     })
@@ -51,6 +55,7 @@ describe("map", () => {
     it("Multiple nested array", () => {
         expect(map([[[[null]]]], (num) => {
             // @ts-nocheck
+            // @ts-ignore
             return num + 2;
         })).toEqual(["2"]);
     })
@@ -58,6 +63,7 @@ describe("map", () => {
     it("Array with undefined and null", () => {
         expect(map([undefined, null], (num) => {
             // @ts-nocheck
+            // @ts-ignore
             return num + 2;
         })).toEqual([NaN, 2]);
     })
@@ -65,6 +71,7 @@ describe("map", () => {
     it("Nested Array with undefined and null", () => {
         expect(map([[undefined], [null]], (num) => {
             // @ts-nocheck
+            // @ts-ignore
             return num + 2;
         })).toEqual(["2", "2"] );
     })
