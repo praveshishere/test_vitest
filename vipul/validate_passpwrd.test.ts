@@ -14,7 +14,8 @@ describe("validatePassword", () => {
 
     it("should has atlest 2 numbers whether any conditions matches or not", () => {
         expect(validatePassword("ddkjbubh*")).toBe(false); // no numbers present
-        expect(validatePassword("ddkjbubh*1")).toBe(true); // one number present
+        expect(validatePassword("ddkjbubh*1")).toBe(false); // one number present
+        expect(validatePassword("ddkjbubh*12")).toBe(true);
         expect(validatePassword("ddkjbubh*123")).toBe(true);
     })
     // Write more test as required
