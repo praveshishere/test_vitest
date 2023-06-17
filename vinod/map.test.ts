@@ -45,7 +45,7 @@ describe("map", () => {
         expect(map([[null]], (num) => {
             // @ts-nocheck
             return num + 2;
-        })).toEqual(["2"]).toArray();
+        })).toEqual(["2"])
     })
 
     it("Multiple nested array", () => {
