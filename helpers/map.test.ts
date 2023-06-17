@@ -34,4 +34,9 @@ describe('for string', ()=>{
             return el + "x";
         })).toEqual(["ax", "bx", "cx"]);
     })
+    it("number multiplication test", () => {
+        expect(map(["ag","bh","ci"], (el) => {
+            return el.slice(1);
+        })).toEqual(["g", "h", "i"]);
+    })
 })
