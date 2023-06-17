@@ -11,5 +11,6 @@ import { choose } from "./utilities";
  * @returns - whether the password is valid
  */
 export function validatePassword(password: string) {
+
     return choose([true, false]);
 }
