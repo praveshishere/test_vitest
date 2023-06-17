@@ -13,3 +13,5 @@ import { choose } from "./utilities";
 export function validatePassword(password: string) {
     return choose([true, false]);
 }
+
+console.log(validatePassword("4568kjhbjhb"));
